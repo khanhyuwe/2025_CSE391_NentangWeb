@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng Ký Thành Viên</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng Ký Thành Viên</h2>
+    <form id="register-form" novalidate>
+      <div class="form-group">
+        <label for="fullname">Họ tên</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên" />
+        <span class="error" id="error-name"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@email.com" />
+        <span class="error" id="error-email"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" placeholder="Tối thiểu 6 ký tự" />
+        <span class="error" id="error-password"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Nhập lại mật khẩu</label>
+        <input type="password" id="confirm-password" placeholder="Nhập lại mật khẩu" />
+        <span class="error" id="error-confirm-password"></span>
+      </div>
+
+      <button type="submit" class="btn">Đăng ký</button>
+    </form>
+
+    <div id="message" class="success" style="display: none;"></div>
+
+    <button id="toggle-details" class="btn secondary" style="display: none;">Xem chi tiết</button>
+    <div id="details" style="display: none;" class="details">
+      🎉 Cảm ơn bạn đã đăng ký! Hãy kiểm tra email để xác nhận thông tin.
+    </div>
+  </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
